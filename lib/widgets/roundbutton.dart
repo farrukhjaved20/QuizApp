@@ -41,7 +41,7 @@ class RoundButtton extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               title,
-              style: Itim.getRegularStyle(
+              style: Raleway.getRegularStyle(
                   fontSize: Dimensions.font20, color: Colors.white),
             ),
           ),

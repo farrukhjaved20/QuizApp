@@ -27,28 +27,33 @@ class LoginView extends StatelessWidget {
           key: formKey,
           child: Column(
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Padding(
-                  padding: EdgeInsets.only(top: Dimensions.paddingVer60),
-                  child: ShaderMask(
-                    shaderCallback: (bounds) => LinearGradient(colors: [
-                      AppColors.airsuporityblue,
-                      AppColors.airsuporityblue,
-                      AppColors.airsuporityblue,
-                    ]).createShader(bounds),
-                    child: Text(
-                      'Login',
-                      style: Itim.getRegularStyle(
-                          fontSize: Dimensions.font24,
-                          color: AppColors.airsuporityblue),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: Dimensions.paddingVer60),
+                      child: Text(
+                        'AgTech Academy',
+                        style: Raleway.getBoldStyle(
+                            fontSize: Dimensions.font24,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.asparagus),
+                      ),
                     ),
-                  ),
-                )
-              ]),
+                    Padding(
+                      padding: EdgeInsets.only(top: Dimensions.paddingVer20),
+                      child: Text(
+                        'Login',
+                        style: Raleway.getBoldStyle(
+                            fontSize: Dimensions.font24,
+                            color: AppColors.asparagus),
+                      ),
+                    )
+                  ]),
               SizedBox(height: Dimensions.height80),
               CustomTextField(
                 controller: controller.emailController.value,
-                label: 'Please enter your email',
+                label: 'Please Enter Your Email',
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Email is required';
@@ -61,7 +66,7 @@ class LoginView extends StatelessWidget {
               ),
               CustomTextField(
                 controller: controller.passwordController.value,
-                label: 'Password',
+                label: 'Please Enter Your Password',
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -69,23 +74,6 @@ class LoginView extends StatelessWidget {
                   }
                   if (!GetUtils.isLengthGreaterThan(value, 6)) {
                     return 'Invalid Password (Password should be more than 6 characters)';
-                  }
-                  return null;
-                },
-              ),
-              CustomTextField(
-                controller: controller.repasswordController.value,
-                obscureText: true,
-                label: 'Confirm password',
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Password is required';
-                  }
-                  if (!GetUtils.isLengthGreaterThan(value, 6)) {
-                    return 'Password should be more than 6 characters';
-                  }
-                  if (value != controller.passwordController.value.text) {
-                    return 'Passwords do not match';
                   }
                   return null;
                 },
@@ -111,7 +99,7 @@ class LoginView extends StatelessWidget {
                       ),
                       Text(
                         'Remember me',
-                        style: Itim.getRegularStyle(
+                        style: Raleway.getRegularStyle(
                             fontSize: Dimensions.font16,
                             color: AppColors.airsuporityblue),
                       ),
@@ -123,7 +111,7 @@ class LoginView extends StatelessWidget {
                   children: [
                     Text(
                       'Sign In with social account',
-                      style: Itim.getRegularStyle(
+                      style: Raleway.getRegularStyle(
                           decoration: TextDecoration.underline,
                           fontSize: Dimensions.font18,
                           color: Colors.black),
@@ -198,7 +186,7 @@ class LoginView extends StatelessWidget {
                 children: [
                   Text(
                     "Don't have an account ? ",
-                    style: Itim.getRegularStyle(
+                    style: Raleway.getRegularStyle(
                         decoration: TextDecoration.none,
                         fontSize: Dimensions.font18,
                         color: Colors.black),
@@ -211,7 +199,7 @@ class LoginView extends StatelessWidget {
                     },
                     child: Text(
                       'Sign up',
-                      style: Itim.getRegularStyle(
+                      style: Raleway.getRegularStyle(
                           decoration: TextDecoration.none,
                           fontSize: Dimensions.font18,
                           color: AppColors.airsuporityblue),

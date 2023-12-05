@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/authentication/login.dart';
 import 'package:quiz_app/firebase_options.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:quiz_app/views/homeview.dart';
+// import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

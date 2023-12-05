@@ -15,7 +15,7 @@ class CustomPopmenubutton extends StatelessWidget {
         children: [
           Text(
             'John Doe',
-            style: Itim.getRegularStyle(
+            style: Raleway.getRegularStyle(
                 fontSize: Dimensions.font16, color: Colors.black87),
           ),
           SizedBox(width: Dimensions.width10),
@@ -31,19 +31,19 @@ class CustomPopmenubutton extends StatelessWidget {
             value: 1,
             child: Text(
               'John Doe',
-              style: Itim.getRegularStyle(
+              style: Raleway.getRegularStyle(
                   fontSize: Dimensions.font16, color: Colors.black87),
             )),
         PopupMenuItem<int>(
             value: 2,
             child: Text('Email',
-                style: Itim.getRegularStyle(
+                style: Raleway.getRegularStyle(
                     fontSize: Dimensions.font16, color: Colors.black87))),
         PopupMenuItem<int>(
             value: 3,
             child: Text(
               'LogOut',
-              style: Itim.getRegularStyle(
+              style: Raleway.getRegularStyle(
                   fontSize: Dimensions.font16, color: Colors.black87),
             )),
       ],

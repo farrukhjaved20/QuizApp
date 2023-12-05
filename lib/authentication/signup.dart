@@ -31,25 +31,18 @@ class SignUp extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Padding(
                   padding: EdgeInsets.only(top: Dimensions.paddingVer60),
-                  child: ShaderMask(
-                    shaderCallback: (bounds) => LinearGradient(colors: [
-                      AppColors.airsuporityblue,
-                      AppColors.airsuporityblue,
-                      AppColors.airsuporityblue,
-                    ]).createShader(bounds),
-                    child: Text(
-                      'Sign Up',
-                      style: Itim.getRegularStyle(
-                          fontSize: Dimensions.font24,
-                          color: AppColors.airsuporityblue),
-                    ),
+                  child: Text(
+                    'Sign Up',
+                    style: Raleway.getBoldStyle(
+                        fontSize: Dimensions.font24,
+                        color: AppColors.asparagus),
                   ),
                 )
               ]),
               SizedBox(height: Dimensions.height80),
               CustomTextField(
                 controller: controller.emailController.value,
-                label: 'Please enter your email',
+                label: 'Please Enter Your Email',
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Email is required';
@@ -62,7 +55,7 @@ class SignUp extends StatelessWidget {
               ),
               CustomTextField(
                 controller: controller.passwordController.value,
-                label: 'Password',
+                label: 'Please Enter Your Password',
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -112,7 +105,7 @@ class SignUp extends StatelessWidget {
                       ),
                       Text(
                         'Remember me',
-                        style: Itim.getRegularStyle(
+                        style: Raleway.getRegularStyle(
                             fontSize: Dimensions.font16,
                             color: AppColors.airsuporityblue),
                       ),
@@ -124,7 +117,7 @@ class SignUp extends StatelessWidget {
                   children: [
                     Text(
                       'Sign up with social account',
-                      style: Itim.getRegularStyle(
+                      style: Raleway.getRegularStyle(
                           decoration: TextDecoration.underline,
                           fontSize: Dimensions.font18,
                           color: Colors.black),
@@ -199,7 +192,7 @@ class SignUp extends StatelessWidget {
                 children: [
                   Text(
                     "Already have an account ?",
-                    style: Itim.getRegularStyle(
+                    style: Raleway.getRegularStyle(
                         decoration: TextDecoration.none,
                         fontSize: Dimensions.font18,
                         color: Colors.black),
@@ -210,7 +203,7 @@ class SignUp extends StatelessWidget {
                     },
                     child: Text(
                       'Sign in',
-                      style: Itim.getRegularStyle(
+                      style: Raleway.getRegularStyle(
                           decoration: TextDecoration.none,
                           fontSize: Dimensions.font18,
                           color: AppColors.airsuporityblue),

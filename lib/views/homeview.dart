@@ -40,11 +40,8 @@ class HomeView extends StatelessWidget {
             ),
             child: Text(
               'AgTech Academy',
-              style: TextStyle(
-                fontSize: Dimensions.font24,
-                color: AppColors.asparagus,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Raleway.getBoldStyle(
+                  fontSize: Dimensions.font24, color: AppColors.asparagus),
             ),
           ),
           SizedBox(height: Dimensions.height190),
@@ -67,7 +64,7 @@ class HomeView extends StatelessWidget {
             ),
             child: Text(
               'Lorem ipsum is a placeholder text commonly \nused for demonstrating meaningful content',
-              style: Itim.getRegularStyle(
+              style: Raleway.getRegularStyle(
                 color: AppColors.richblack,
                 fontSize: Dimensions.font14,
               ),
@@ -80,7 +77,7 @@ class HomeView extends StatelessWidget {
             ),
             child: Text(
               'Total Score: 100 ',
-              style: Itim.getRegularStyle(
+              style: Raleway.getRegularStyle(
                 color: AppColors.richblack,
                 fontSize: Dimensions.font18,
               ),

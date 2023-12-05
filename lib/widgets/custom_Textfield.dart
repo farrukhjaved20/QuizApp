@@ -38,8 +38,8 @@ class CustomTextField extends StatelessWidget {
           controller: controller,
           keyboardType: keyboardType,
           obscureText: obscureText,
-          style: Itim.getRegularStyle(
-              fontSize: Dimensions.font18,
+          style: Raleway.getRegularStyle(
+              fontSize: Dimensions.font16,
               color: Colors.black87,
               fontWeight: FontWeight.w400),
           decoration: InputDecoration(
@@ -48,8 +48,8 @@ class CustomTextField extends StatelessWidget {
                 borderSide: BorderSide(color: AppColors.asparagus),
                 borderRadius: const BorderRadius.all(Radius.circular(30))),
             labelText: label,
-            labelStyle: Itim.getRegularStyle(
-                fontSize: Dimensions.font18, color: AppColors.asparagus),
+            labelStyle: Raleway.getRegularStyle(
+                fontSize: Dimensions.font16, color: AppColors.asparagus),
             errorBorder: OutlineInputBorder(
               borderSide: const BorderSide(color: Colors.red),
               borderRadius: BorderRadius.circular(30),
@@ -58,8 +58,8 @@ class CustomTextField extends StatelessWidget {
               borderSide: BorderSide(color: AppColors.asparagus),
               borderRadius: BorderRadius.circular(30),
             ),
-            errorStyle: Itim.getRegularStyle(
-              fontSize: Dimensions.font14,
+            errorStyle: Raleway.getRegularStyle(
+              fontSize: Dimensions.font16,
               color: Colors.red,
             ),
             focusedBorder: OutlineInputBorder(
