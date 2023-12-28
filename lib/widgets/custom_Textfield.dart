@@ -25,54 +25,52 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-          top: Dimensions.height20,
-          left: Dimensions.paddingHor35,
-          right: Dimensions.paddingHor35),
-      child: Material(
-        //elevation: 10,
-        borderRadius: BorderRadius.circular(30),
-        shadowColor: AppColors.textcolor.withAlpha(60),
-        child: TextFormField(
-          controller: controller,
-          keyboardType: keyboardType,
-          obscureText: obscureText,
-          style: Raleway.getRegularStyle(
-              fontSize: Dimensions.font16,
-              color: Colors.black87,
-              fontWeight: FontWeight.w400),
-          decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(30, 10, 20, 30),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.asparagus),
-                borderRadius: const BorderRadius.all(Radius.circular(30))),
-            labelText: label,
-            labelStyle: Raleway.getRegularStyle(
-                fontSize: Dimensions.font16, color: AppColors.asparagus),
-            errorBorder: OutlineInputBorder(
-              borderSide: const BorderSide(color: Colors.red),
-              borderRadius: BorderRadius.circular(30),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
+    return SizedBox(
+      width: Dimensions.width350,
+      child: TextFormField(
+        controller: controller,
+        keyboardType: keyboardType,
+        obscureText: obscureText,
+        cursorColor: Colors.white,
+        style: Raleway.getRegularStyle(
+            fontSize: Dimensions.font16,
+            color: Colors.white,
+            fontWeight: FontWeight.w400),
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white.withAlpha(80),
+          contentPadding: const EdgeInsets.fromLTRB(30, 10, 20, 30),
+          border: OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.asparagus),
-              borderRadius: BorderRadius.circular(30),
-            ),
-            errorStyle: Raleway.getRegularStyle(
-              fontSize: Dimensions.font16,
-              color: Colors.red,
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.asparagus),
-              borderRadius: BorderRadius.circular(30),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.asparagus),
-              borderRadius: BorderRadius.circular(30),
-            ),
+              borderRadius: const BorderRadius.all(Radius.circular(30))),
+          labelText: label,
+          labelStyle: Raleway.getRegularStyle(
+              fontSize: Dimensions.font16, color: Colors.white),
+          errorBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.red),
+            borderRadius: BorderRadius.circular(30),
           ),
-          validator: validator,
+          focusedErrorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.asparagus,
+            
+            ),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          errorStyle: Raleway.getRegularStyle(
+            fontSize: Dimensions.font16,
+            color: Colors.red,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppColors.asparagus),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppColors.asparagus),
+            borderRadius: BorderRadius.circular(30),
+          ),
         ),
+        validator: validator,
       ),
     );
   }

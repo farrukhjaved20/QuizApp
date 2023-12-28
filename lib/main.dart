@@ -1,9 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/authentication/login.dart';
 import 'package:quiz_app/firebase_options.dart';
-import 'package:quiz_app/views/homeview.dart';
+import 'package:quiz_app/views/splashscreen/splashscreen.dart';
 // import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 Future<void> main() async {
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: LoginView(),
+        home: SplashScreen(),
       ),
     );
   }
