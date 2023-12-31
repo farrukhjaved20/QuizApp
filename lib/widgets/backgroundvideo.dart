@@ -69,7 +69,7 @@ class BackgroundVideo extends StatelessWidget {
       await videoController.initialize();
       videoController.play();
       videoController.setLooping(true);
-      return videoController;
+       return videoController;
     } catch (e) {
       if (kDebugMode) {
         print('Error initializing video controller: $e');

@@ -43,6 +43,8 @@ dependencies:
   # flutter_facebook_auth: ^6.0.3
   video_player: ^2.8.1
   firebase_storage: ^11.5.6
+  vimeo_video_player: ^0.0.10
+  
   
 
 dev_dependencies:
